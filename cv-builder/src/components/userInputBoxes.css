@@ -1,28 +1,55 @@
 .general,
-.general form {
+.general form,
+.education,
+.education form,
+.experience,
+.experience form {
   display: flex;
   flex-direction: column;
 }
 
-.general {
-  width: 500px;
-  height: 400px;
+.general,
+.education,
+.experience {
+  min-width: 500px;
+  min-height: 400px;
   border-radius: 15px;
   background-color: rgb(192, 192, 192);
   padding: 50px;
 }
 
-.general h2 {
+.general h2,
+.education h2,
+.experience h2 {
   font-size: 40px;
   margin-bottom: 70px;
   align-self: center;
 }
 
-.general form {
+.general form,
+.education form,
+.experience form {
   gap: 10px;
 }
 
 .general form input,
-.general form label {
+.general form label,
+.education form input,
+.education form label,
+.experience input,
+.experience label {
   font-size: 20px;
+}
+
+.general form input,
+.education form input {
+  padding: 5px;
+}
+
+.experience textarea {
+  height: 100px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: inherit;
+  resize: vertical;
 }
