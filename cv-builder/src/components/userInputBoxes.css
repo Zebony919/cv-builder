@@ -47,9 +47,20 @@
 }
 
 .experience textarea {
-  height: 100px;
+  height: 250px;
   padding: 10px;
   font-size: 20px;
   font-family: inherit;
   resize: vertical;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.previous-button,
+.next-button {
+  height: 30px;
+  width: 100px;
 }

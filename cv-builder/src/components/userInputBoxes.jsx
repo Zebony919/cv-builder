@@ -1,8 +1,15 @@
 import { useState } from "react";
 import "./userInputBoxes.css";
 
-function UserInputBoxes() {
+function UserInputBoxes({ formData, setFormData }) {
   const [currentForm, setCurrentForm] = useState(0);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <section className="inputBody">
@@ -12,21 +19,40 @@ function UserInputBoxes() {
 
           <form>
             <label for="name">Name:</label>
-            <input type="text" name="name" placeholder="John Smith"></input>
+            <input
+              type="text"
+              name="name"
+              placeholder="John Smith"
+              value={formData.name}
+              onChange={handleChange}
+            />
+
             <label for="age">Age:</label>
-            <input type="text" name="age" placeholder="20"></input>
+            <input
+              type="number"
+              name="age"
+              placeholder="20"
+              value={formData.age}
+              onChange={handleChange}
+            />
+
             <label for="email">Email:</label>
             <input
               type="email"
               name="email"
               placeholder="eg: somethingCool@gmail.com"
-            ></input>
+              value={formData.email}
+              onChange={handleChange}
+            />
+
             <label for="phoneNumber">Phone Number:</label>
             <input
               type="number"
               name="phoneNumber"
               placeholder="eg: 012 3456 7890"
-            ></input>
+              value={formData.phoneNumber}
+              onChange={handleChange}
+            />
           </form>
         </div>
       )}
@@ -52,7 +78,6 @@ function UserInputBoxes() {
             <input type="date" name="graduation"></input>
           </form>
         </div>
-        //keep format
       )}
 
       {currentForm === 2 && (
@@ -68,11 +93,11 @@ function UserInputBoxes() {
             />
           </form>
         </div>
-        //keep format
       )}
 
       <div className="navigation-buttons">
         <button
+          className="previous-button"
           onClick={() => setCurrentForm(currentForm - 1)}
           disabled={currentForm === 0}
         >
@@ -80,6 +105,7 @@ function UserInputBoxes() {
         </button>
 
         <button
+          className="next-button"
           onClick={() => setCurrentForm(currentForm + 1)}
           disabled={currentForm === 2}
         >
