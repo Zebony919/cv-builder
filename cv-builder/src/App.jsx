@@ -10,6 +10,10 @@ function App() {
     age: "",
     email: "",
     phoneNumber: "",
+    school: "",
+    degree: "",
+    graduation: "",
+    experience: "",
   });
 
   return (

@@ -1,7 +1,41 @@
+.resumeBody,
+.personalInfo,
+.educationInfo,
+.experienceInfo {
+  display: flex;
+  flex-direction: column;
+}
+
 .resumeBody {
   width: 90%;
   height: 800px;
   border: 2px solid black;
   border-radius: 15px;
   background-color: white;
+  align-items: center;
+  gap: 10px;
+}
+
+.resumeBody p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.top {
+  width: 90%;
+  height: 10%;
+  font-size: 30px;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.personalInfo,
+.educationInfo,
+.experienceInfo {
+  width: 90%;
+  gap: 20px;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
 }

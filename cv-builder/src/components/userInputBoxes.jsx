@@ -67,15 +67,24 @@ function UserInputBoxes({ formData, setFormData }) {
               type="text"
               name="school"
               placeholder="Harvard University"
+              value={formData.school}
+              onChange={handleChange}
             ></input>
             <label for="degree">Degree:</label>
             <input
               type="text"
               name="degree"
               placeholder="Computer Science"
+              value={formData.degree}
+              onChange={handleChange}
             ></input>
             <label for="graduation">Date of Graduation:</label>
-            <input type="date" name="graduation"></input>
+            <input
+              type="date"
+              name="graduation"
+              value={formData.graduation}
+              onChange={handleChange}
+            ></input>
           </form>
         </div>
       )}
@@ -87,9 +96,11 @@ function UserInputBoxes({ formData, setFormData }) {
           <form>
             <label htmlFor="experienceDesc">Experience:</label>
             <textarea
-              name="experienceDesc"
-              id="experienceDesc"
+              name="experience"
+              id="experience"
               placeholder="Eg: Company Name, your roles, skills"
+              value={formData.experience}
+              onChange={handleChange}
             />
           </form>
         </div>
