@@ -1,0 +1,17 @@
+.body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.userInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
